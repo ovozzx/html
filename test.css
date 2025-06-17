@@ -1,0 +1,10 @@
+body {
+    text-align: left;
+}
+#heading { /*id="heading"*/
+    color:blue;
+}
+#text {
+    color:black;
+    font-size:15px;
+}
