@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>자바스크립트 이벤트 : 민들레 1</title>
+    <style> <!--css 스타일 작성 부분-->
+        #item {<!--id-->
+			position:relative;
+			width:500px;
+			height:auto;
+			padding:15px 20px;
+			margin:auto;
+		}
+		button {<!--html 태그-->
+			background-color:rgba(255,255,255,0.7);;
+			padding:5px;
+			border:1px solid #ccc;
+			font-size:0.8em;			
+		}
+		.over {<!--클래스 (그룹 느낌)-->
+			position:absolute;
+			left:30px;
+			bottom:30px;
+		}
+		.detail {
+			width:400px;
+			text-align:left;			
+			line-height:1.8;
+			display:none;<!--처음에 안 보이게 함-->
+		}
+		#cover { border: 5px solid transparent;}
+    </style>
+</head>
+<body>
+    <div id="item">
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODAxMjVfMzUg%2FMDAxNTE2ODcwMTU2MjAy.UIfwrLIjgF2W9Z5F_Bx8-GaVa60BIqA6TdXcUZIrYdIg.ZVJd4UJGn2gOiccZiek5bHZLvPGisS4GRJX-FsUlX-Ag.JPEG.yejin_tree%2Fdandelion-bunch-3033048_1920.jpg&type=sc960_832" alt="">
+        <button class="over" id="open" onclick="showDetail()">상세 설명 보기</button>
+        <div id="desc" class="detail">
+            <h4>민들레</h4>
+            <p>어디서나 매우 흔하게 보이는 잡초로서 바닥에 딱 붙어서 꽃봉오리 하나가 쏙 올라온다. 톱니 모양의 잎새와 눈에 확 띄는 노란 꽃이 인상적이다. 특히 꽃이 지고나면 솜털모양의 깃을 가진 씨앗들이 나오는데 바람을 타고 날아가서 널리 퍼진다.</p>        
+            <button id="close" onclick="hideDetail()">상세 설명 닫기</button>
+        </div>
+    </div>
+    <script>
+        function showDetail() {
+            document.querySelector('#desc').style.display = "block"; <!--블록 요소(차지)로 표시-->
+            document.querySelector('#open').style.display = "none";
+        }
+        function hideDetail() {
+            document.querySelector('#desc').style.display = "none";
+            document.querySelector('#open').style.display = "block";
+
+        }
+    </script>
+</body>
+</html>
