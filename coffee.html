@@ -144,15 +144,32 @@
         var smallPics = document.querySelectorAll(".small");
         
         for(let i=0;i<smallPics.length;i++){
-            smallPics[i].addEventListener("click", changePic);
-        }
+            smallPics[i].addEventListener("click", changePic); // 요소별로, 클릭되면 이 함수를 실행해!라고 이벤트 리스너를 for문으로 미리 붙이는 작업
+        } // 클릭 감지는 브라우저의 이벤트 루프 시스템이 담당
 
         function changePic(){
             var newPic = this.src;
-            bigPic.setAttribute("src", newPic); // newPic 값을 큰 이미지의 src 속성에 할당.
+            bigPic.setAttribute("src", newPic); // bigPic의 src 속성에 newPic 값을 할당.
             // 윗 줄을 cup.src = newPic; 로 사용해도 됨.
         }
-        // 상세설명 보기 및 닫기 추가 예정
+        // 상세설명 보기 및 닫기 추가 
+        var isOpen = false;
+        var view = document.querySelector("#view"); 
+        view.addEventListener("click", function(){
+            if(isOpen == false){
+                document.querySelector("#detail").style.display = "block";
+                view.innerHTML = "상세 설명 닫기";
+                isOpen = true;
+            }
+            else{
+                document.querySelector("#detail").style.display = "none"; // display : 공간도 사라짐 <-> visibility : 공간은 남음  
+                view.innerHTML = "상세 설명 보기";
+                isOpen = false;
+            }
+        }
+
+        );
+      
     </script>
 </body>
 </html>
