@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DOM - Create & Add Node</title>
+	<style>
+		#container {
+			width:500px;
+			margin:20px auto;
+		}
+		h1 {
+			font-size:2.5em;
+			text-align: center
+		}
+		form {
+			margin-top:50px;			
+		}
+		input[type="text"] {
+			float:left;
+			width:300px;
+			padding:12px;
+			border:none;
+			border-bottom:1px solid #ccc;
+			font-size:20px;
+		}
+		input:focus {
+			outline: none;
+		}
+		button {
+			width:100px;
+			border:1px solid #ccc;
+			border-radius:7px;
+			padding:12px;	
+			margin-left:30px;
+			font-size:20px;
+		}
+		button:hover {
+			background-color:#ccc;
+		}
+		hr {
+			clear:both;
+			visibility: hidden;
+		}
+		#nameList > p {
+			font-size:20px;
+			text-indent:50px;
+			line-height: 1.5;
+		}
+		.del {
+			font-size:20px;
+			text-align: center;
+			color:#ccc;
+			background:transparent;
+			float:right;
+			margin-right:10px;
+		}
+		.del:hover {
+			color:#222;
+			cursor: pointer;
+		}
+		.del:active {
+			outline:0;
+		}        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>참가 신청</h1>
+        <form action=""> 
+        <!-- 폼 : 사용자의 입력 데이터를 서버로 전송하기 위한 영역 (텍스트 입력창이나 버튼을 포함한 입력 양식)-->
+        <!-- action -> 폼을 제출했을 때 보낼 서버 주소 (빈값 = 아무 곳에도 전송 안 함)-->
+            <input type="text" id="userName" placeholder="이름" required autocomplete="off"> 
+            <!--placeholder -> 입력 필드에 아무것도 입력되지 않을 때, 회색 안내문구로 표시됨-->
+            <!--required -> 필수 입력 조건 (빈 입력으로 폼 제출 불가능), 여기서는 true (속성명만 써도 true) -->
+            <!--autocomplete : 과거 입력 값 제안 기능 (자동 완성) off (보안 목적) -->
+            <button onclick="newRegister();return false;">신청</button>
+            <!--return false -> 입력 내용을 서버로 전송하는 기능을 사용 X (기본 폼 제출 막음, 페이지 전환 방지), 이 내용 없으면 버튼 클릭 시 빈 페이지로 넘어감-->
+            <!--<form>은 기본적으로 버튼 클릭 시 action 경로로 데이터를 전송하면서 페이지가 새로고침됨.-->
+        </form>
+        <hr> <!--수평선-->
+        <div id="nameList"></div>
+    </div>
+    <script>
+        function newRegister(){
+            var newP = document.createElement("p"); 
+            var userName = document.querySelector("#userName");
+            var newText = document.createTextNode(userName.value);
+            newP.appendChild(newText);
+
+            var delBttn = document.createElement("span") // span -> 한줄 인라인요소 (작은 아이콘이나 텍스트 등을 라인 안에 간단하게 삽입할 때 적합한 태그, 작고 간단한 클릭용 UI 구성에 최적화)
+            var delText = document.createTextNode("X");
+            delBttn.setAttribute("class","del");
+            delBttn.appendChild(delText); // <span>X</span> 형태 완성
+            newP.appendChild(delBttn); // 사용자 이름 옆에 추가
+            /* 위 내용으로 아래와 같은 구조가 됨, 💡 자식노드면 <태그></태그> 사이에 들어가는 값이 됨
+            <p>                     ← newP
+            ├── "홍길동"            ← newText
+            └── <span class="del">  ← delBttn
+                └── "X"            ← delText
+
+            <p>
+            사용자 이름 (텍스트 노드)
+            <span class="del">X</span>
+            </p>
+            */
+            var nameList = document.querySelector("#nameList");
+            nameList.insertBefore(newP, nameList.childNodes[0]); 
+            // insertBefore(추가할 요소, 기준 요소) -> 기준 요소 앞에 추가 (가장 위에 이름 추가)
+            // childNodes -> 선택한 요소의 모든 자식 노드를 배열로 반환 🚨 텍스트 노드도 포함되어, 줄바꿈 등이 나올 수 있음
+            userName.value = ""; // 텍스트 박스 지움
+
+            var removeBttns = document.querySelectorAll(".del");
+
+            for(let i=0;i<removeBttns.length;i++){
+                removeBttns[i].addEventListener("click", function (){                    
+                    if (this.parentNode.parentNode) // this(span 요소)의 부모(p)의 부모(<div id="nameList">)가 있을 경우 실행
+                        this.parentNode.parentNode.removeChild(this.parentNode);
+                        // removeChild -> 부모 노드에서 자식 노드 삭제 => 부모(<div id="nameList">).removeChild(자식(p))
+                }
+            );
+            }
+        }
+    
+    </script>
+</body>
+</html>
