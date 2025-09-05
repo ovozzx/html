@@ -1,36 +1,37 @@
-body{
-/* background-color: #667788;*/
-  background-color: #333333;
+body {
+  /* background-color: #667788;*/
+  background-color: #f2f4f7;
 }
 
 .wrapper {
   margin: 0 auto;
   width: 1000px;
-  padding : 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
   background-color: #ffffff;
   border-radius: 20px;
-  
+  text-align: center;
 }
 
 .head_line {
   font-size: 2rem;
   font-weight: 600;
-  margin : 20px 0 20px 0;
-  padding : 0 0 0 50px;
+  margin: 20px 0 20px 0;
+  padding: 0 0 0 50px;
+  text-align: left;
 }
 
 .main {
   width: 1000px;
   text-align: center;
-  margin : 30px 0 50px 0;
+  margin: 30px 0 50px 0;
 }
 
 .main_img_box {
   display: inline-block;
   width: 360px;
   height: 270px;
-  margin : 0;
-  padding : 30px 30px 0 0;
+  margin: 0;
+  padding: 30px 30px 0 0;
   text-align: left;
   vertical-align: middle;
 }
@@ -41,7 +42,8 @@ body{
   height: 300px;
   border-radius: 20px;
   vertical-align: middle;
-  margin : 0 30px 0 0;
+  margin: 0 30px 0 0;
+  border: 1px solid gainsboro;
 }
 
 .main_content {
@@ -52,13 +54,13 @@ body{
   vertical-align: middle;
 }
 
-.main_content_title{
-    width: 450px;
-    vertical-align: top;
-    padding: 20px 0 0 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-    border-top: 1px solid gainsboro;
+.main_content_title {
+  width: 450px;
+  vertical-align: top;
+  padding: 20px 0 0 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-top: 0.5px solid #eee;
 }
 
 .main_content_content {
@@ -66,79 +68,86 @@ body{
   height: auto;
   font-size: 1.2rem;
   vertical-align: middle;
-  margin: 30px 0 30px 0;
+  margin: 30px 0 12px 0;
 }
 
-.main_content_tail{
-   width: 450px;
-   vertical-align: top; 
-   padding: 0 0 15px 0;
-   border-bottom: 1px solid gainsboro;
+.main_content_tail {
+  width: 450px;
+  vertical-align: top;
+  padding: 0 0 30px 0;
+  border-bottom: 0.5px solid #eee;
+  font-size: 1.06rem;
+  color: #777;
 }
 
-.subs{
+.subs {
   width: 1000px;
   text-align: center;
 }
 
-.sub_left{
+.sub_left {
   display: inline-block;
-  width: 400px;  
-  height: 200px;
+  width: 450px;
+  height: 185px;
   text-align: left;
-  border-bottom: 1px solid gainsboro;
+  border-bottom: 0.5px solid #eee;
 }
 
-.sub_right{
+.sub_right {
   display: inline-block;
-  width: 400px;  
-  height: 200px;
+  width: 450px;
+  height: 185px;
   text-align: left;
-  border-bottom: 1px solid gainsboro;
+  border-bottom: 0.5px solid #eee;
 }
 
-.sub_img_box{
+.sub_img_box {
   display: inline;
   vertical-align: middle;
   width: 200px;
 }
 
-.sub_img{
+.sub_img {
   display: inline-block;
   width: 180px;
-  height: 130px;
+  height: 120px;
   border-radius: 20px;
   vertical-align: middle;
   text-align: left;
   border: 1px solid #888;
 }
 
-.sub_content{
+.sub_content {
   display: inline-block;
-  width: 200px;
+  width: 240px;
   height: 150px;
   text-align: left;
   vertical-align: middle;
   padding: 30px 0 0 10px;
 }
 
-.sub_title{
-   width: 150px;
-   margin : 0 0 10px 0;
-   vertical-align: middle;
+.sub_title {
+  font-size: 1.15rem;
+  width: 230px;
+  margin: 0 0 10px 0;
+  vertical-align: middle;
 }
 
-.sub_tail{
-   width: 150px; 
+.sub_tail {
+  font-size: 1.05rem;
+  width: 230px;
+  color: #777;
 }
 
-.tail{
+.tail {
+  display: inline-block;
   font-size: 1.5rem;
-  text-align: center;
-  border: #667788;
+  border: 1px solid gainsboro;
   border-radius: 100px;
+  padding: 10px 35px 10px 35px;
+  margin: 30px 0 30px 0;
 }
 
-.news{
- color:#006688;
+.news {
+  color: #4881f7;
 }
