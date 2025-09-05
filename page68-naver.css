@@ -1,0 +1,31 @@
+.wrapper {
+  width: 700px;
+  background-color: #cccccc;
+  border: 2px solid #666666;
+  padding: 10px;
+}
+
+.summary-section {
+  display: inline-block;
+  background-color: aliceblue;
+  width: 420px;
+}
+
+.information-section {
+  display: inline-block;
+  background-color: aliceblue;
+  width: 280px;
+}
+
+.news-stand {
+  height: 400px;
+  padding: 15px;
+  border: 1px solid gray;
+}
+
+.login {
+  background-color: green;
+  height: 200px;
+  padding: 15px;
+  border: 1px solid gray;
+}

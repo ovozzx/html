@@ -1,0 +1,36 @@
+body{
+    margin: 0 0;
+}
+
+.wrapper { /*얘를 text 정렬하고 싶으면 부모인 body에게 줌*/
+  /* display: inline-block; */
+  width: 500px;
+  background-color: #cccccc;
+  border: 2px solid #666666;
+  padding: 10px;
+  margin: 0 auto;
+  /*가로 정렬*/
+  /* text-align: center; */
+}
+
+.box {
+  width: 100px;
+  background-color: #aaaa00; /*F로 갈수록 밝아짐*/
+  border: 2px solid #ff0000;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.box-a {
+  height: 100px;
+}
+
+.box-b {
+  height: 150px;
+}
+
+.box-c {
+  height: 200px;
+}
+
+

@@ -1,0 +1,144 @@
+body{
+/* background-color: #667788;*/
+  background-color: #333333;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 1000px;
+  padding : 10px 10px 10px 10px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  
+}
+
+.head_line {
+  font-size: 2rem;
+  font-weight: 600;
+  margin : 20px 0 20px 0;
+  padding : 0 0 0 50px;
+}
+
+.main {
+  width: 1000px;
+  text-align: center;
+  margin : 30px 0 50px 0;
+}
+
+.main_img_box {
+  display: inline-block;
+  width: 360px;
+  height: 270px;
+  margin : 0;
+  padding : 30px 30px 0 0;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.main_img {
+  display: inline-block;
+  width: 450px;
+  height: 300px;
+  border-radius: 20px;
+  vertical-align: middle;
+  margin : 0 30px 0 0;
+}
+
+.main_content {
+  display: inline-block;
+  width: 450px;
+  height: 300px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.main_content_title{
+    width: 450px;
+    vertical-align: top;
+    padding: 20px 0 0 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-top: 1px solid gainsboro;
+}
+
+.main_content_content {
+  width: 450px;
+  height: auto;
+  font-size: 1.2rem;
+  vertical-align: middle;
+  margin: 30px 0 30px 0;
+}
+
+.main_content_tail{
+   width: 450px;
+   vertical-align: top; 
+   padding: 0 0 15px 0;
+   border-bottom: 1px solid gainsboro;
+}
+
+.subs{
+  width: 1000px;
+  text-align: center;
+}
+
+.sub_left{
+  display: inline-block;
+  width: 400px;  
+  height: 200px;
+  text-align: left;
+  border-bottom: 1px solid gainsboro;
+}
+
+.sub_right{
+  display: inline-block;
+  width: 400px;  
+  height: 200px;
+  text-align: left;
+  border-bottom: 1px solid gainsboro;
+}
+
+.sub_img_box{
+  display: inline;
+  vertical-align: middle;
+  width: 200px;
+}
+
+.sub_img{
+  display: inline-block;
+  width: 180px;
+  height: 130px;
+  border-radius: 20px;
+  vertical-align: middle;
+  text-align: left;
+  border: 1px solid #888;
+}
+
+.sub_content{
+  display: inline-block;
+  width: 200px;
+  height: 150px;
+  text-align: left;
+  vertical-align: middle;
+  padding: 30px 0 0 10px;
+}
+
+.sub_title{
+   width: 150px;
+   margin : 0 0 10px 0;
+   vertical-align: middle;
+}
+
+.sub_tail{
+   width: 150px; 
+}
+
+.tail{
+  font-size: 1.5rem;
+  text-align: center;
+  border: #667788;
+  border-radius: 100px;
+}
+
+.news{
+ color:#006688;
+}

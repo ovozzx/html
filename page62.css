@@ -1,0 +1,27 @@
+/* width는 부모의 영향을 받는다 */
+.box {
+  background-color: antiquewhite;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.width-auto {
+  /* width 값을 지정하지 않을 경우 자동으로 할당되는 크기 */
+  width: auto; /* 기입할 필요 없음 */
+}
+
+.width-half {
+  width: 50%;
+}
+
+.height-half {
+  height: 50%;
+}
+
+body {
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}

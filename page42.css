@@ -1,0 +1,100 @@
+/* ✅ (1) id 셀렉터 → # */
+
+/* id가 header인 태그의 스타일 */
+/*css 주석*/
+#header {
+  /* 배경색 */
+  background-color: blueviolet;
+  /*글자 색상*/
+  color: aliceblue;
+}
+
+/* id가 main-container인 태그의 스타일 
+    배경색 : yellow
+    글자색 : purple    
+*/
+#main-container {
+  background-color: yellow;
+  color: purple;
+  /* 글자의 크기를 다른 글자의 두 배로 지정 */
+  font-size: 2rem;
+}
+
+/* id가 footer인 태그의 스타일 
+    글자색 : red
+    폰트의 크기 : 1.5 배
+*/
+#footer {
+  color: red;
+  font-size: 1.5rem;
+}
+
+/* ✅ (2) class 셀렉터 → . */
+
+/* 클래스가 header-logo인 태그의 스타일
+    폰트의 크기 : 3 배
+    정렬 : 가운데
+*/
+.header-logo {
+  font-size: 3rem;
+  text-align: center;
+  background-color: blue;
+}
+
+/* 클래스가 main-container--content인 태그의 스타일
+    폰트의 크기 : 0.5 배
+    글자색 : red
+    정렬 : 왼쪽
+*/
+.main-container--content {
+  font-size: 0.5rem;
+  color: red;
+  text-align: left;
+}
+
+/* 클래스가 footer-links인 태그의 스타일
+    폰트의 크기 : 1.245 배
+    글자색 : cyan
+    정렬 : 가운데
+*/
+.footer-links {
+  font-size: 1.245rem;
+  color: cyan;
+  text-align: center;
+}
+
+/* 클래스가 footer-links--link인 태그의 스타일
+    폰트의 크기 : 0.7 배
+    글자색 : magenta
+    정렬 : 오른쪽
+*/
+.footer-links--link {
+  font-size: 0.7rem;
+  color: magenta;
+  text-align: right;
+}
+
+/* ✅ (3) Tag 셀렉터 →  */
+
+/* 페이지 전체의 배경색을 밝은 회색으로 변경한다 */
+body {
+  background-color: lightgray;
+}
+
+/* 페이지 내의 모든 div 태그의 배경색을 marine 색으로 변경한다 */
+div {
+  background-color: aquamarine;
+  /* 모든 div가 바뀌지 않음 why? 우선 순위 때문 */
+}
+
+/* 페이지 내의 모든 p 태그의 배경색을 red로 변경한다 */
+p {
+  background-color: red;
+}
+
+/* ✅ (4) Universal 셀렉터 →  */
+
+/* 모든 태그들의 글자 크기를 기본 크기의 5배로 조정한다 */
+* {
+  font-size: 1rem; /* 위치 영향 받지 않음 */
+}

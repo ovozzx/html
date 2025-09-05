@@ -1,0 +1,91 @@
+body {
+  background-color: #fff;
+}
+
+.absolute-popup {
+  display: none; /* 브라우저에서 표현하지 않는다 */
+  background-color: #fff;
+  border: 3px solid #333;
+  /* 절대 좌표 배치 */
+  position: absolute; /* 인라인 block처럼 됨 */
+  top: 100px;
+  left: 50px;
+  width: 300px;
+  height: 250px;
+  padding: 50px;
+}
+
+.fixed-layout {
+  /*글자 모두 상속되어 흰색으로 출력*/
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.menu-list {
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  display: inline-block;
+}
+
+.fixed-button {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #eee;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.sticky-layout {
+  margin: 150px 0 0 0;
+  position: sticky; /* 이렇게만 주면 스크롤에 의해 중첩되기만함 멈추려는 위치도 줘야 함*/
+  top: 50px;
+}
+
+.navigator {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  background-color: #f3f3f3;
+  padding: 20px;
+}
+
+.relative-layout {
+  position: relative;
+  width: 500px;
+  z-index: -1;
+}
+
+.image {
+  width: 100%;
+}
+
+.header {
+  position: absolute; /*사진의 왼쪽상단이 0 0 된다!*/
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #0008;
+  color: #fff;
+  padding: 30px;
+}
+
+.footer {
+  position: absolute; /*사진의 왼쪽상단이 0 0 된다!*/
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0008;
+  color: #fff;
+}

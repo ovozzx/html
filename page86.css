@@ -1,0 +1,17 @@
+.author {
+  padding: 0;
+}
+
+.list-item {
+  display: inline-block;
+  /*padding : 0 10px;*/
+}
+
+.list-item::after {
+  content: "|";
+  margin : 0 10px;
+}
+
+.list-item:last-child::after {
+  content: "";
+}
