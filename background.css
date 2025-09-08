@@ -1,0 +1,27 @@
+.background{
+    background-image:url("https://pm.pstatic.net/resources/asset/sp_main.dfa24248.png") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 139px;
+    height: 137px;
+}
+
+.icon{
+    background-image:url("https://pm.pstatic.net/resources/asset/sp_main.dfa24248.png") ;
+    background-repeat: no-repeat;
+    background-position: -750px -304px;
+    width: 44px;
+    height: 44px;
+}
+
+.movie-poster{
+    background-image: url("https://media.themoviedb.org/t/p/w220_and_h330_face/36xXlhEpQqVVPuiZhfoQuaY4OlA.jpg");
+    background-repeat: no-repeat;
+    width: 220px;
+    height: 330px;
+}
+
+.movie-poster:hover{
+    background-size: 250px 360px;
+    background-position: -15px -15px;
+}

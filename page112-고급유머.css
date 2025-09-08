@@ -1,0 +1,54 @@
+.header{
+    background-color: #fed50a;
+    margin:0 auto;
+    padding: 0;
+    border : 1px solid #e3a20e;
+    width: 680px;
+}
+
+.logo,
+.my,
+.write{
+    display: inline-block;
+    vertical-align: middle;
+    
+
+}
+
+.logo
+{
+    background-image: url("");
+    width: calc(680px - 115px);
+    height: 36px;
+    padding-left: 20px;
+
+}
+
+.logo-img{
+    background-image: url("https://www.goodgag.net/_tpl/v3/_css/common.1px.png");
+    background-repeat: no-repeat;
+    width: 82px;
+    height: 36px;
+    background-position: 0 2px;
+    background-size: 124px 110px;
+
+}
+
+.my-img{
+    background-image: url("https://www.goodgag.net/_tpl/v3/_css/common.1px.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 28px;
+    background-position: 5px -34px;
+    background-size: 114px 105px;
+}
+
+
+.write-img{
+    background-image: url("https://www.goodgag.net/_tpl/v3/_css/common.1px.png");
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 28px;
+    background-position: -35px -34px;
+    background-size: 120px 104px;
+}
