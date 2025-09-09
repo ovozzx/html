@@ -1,0 +1,73 @@
+body{
+    margin:0;
+}
+
+/****사용자 입력 스타일****/
+.user-input{
+    padding:10px;
+    color: #333;
+
+    & > input:focus{
+        outline: 0;
+        box-shadow: 0px 0px 5px #ccc; /* 위치 위치 블러 색깔 */ 
+    }
+
+    & > input[type="radio"]{
+        display: none; /*라디오 숨김*/
+        &:checked + label { /*여기서 this는 input radio*/
+            color:red;
+        }
+    }
+
+    & > h3{
+        margin: 10px 0 0 0;
+        font-size: 0.85rem;
+        font-weight: 700;
+    }
+
+    & > label.inline{ /* 자식 label 중에 클래스명이 inline인 것만 찾아라 */
+        display: inline-block; /* block인 것을 inline으로 바꿔서 옆에 붙게 출력됨*/
+        font-weight: 400;
+    }
+
+    & > label{
+        display: block;
+        font-size: 0.85rem;
+        margin-top: 10px;
+        font-weight: 700; 
+
+        & + input[type="text"], /* 이때 this는 label */
+        & + input[type="password"]{
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            font-size: 0.85rem;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+    /* 가독성 및 관리 쉬운 방식 */
+
+
+}
+
+
+
+/* 
+.user-input > label { .user-input 자식 중에 label 
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.user-input > input[type="text"],
+.user-input > input[type="password"]
+{
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 0.85rem;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+} */

@@ -1,0 +1,74 @@
+.wrapper{
+  width: 1045px;
+  height: 1200px;
+  padding: 40px 0 0 0;
+  margin: 0 auto;
+}
+
+.head{
+  font-size: 24px;
+  font-weight: 700;
+  height: 33px;
+  margin: 0 0 15px 0;
+}
+
+.main-title{
+  font-size: 22px;
+}
+
+.sub-title{
+  color: #aaa;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.sub-title::before{
+  content: " | ";
+}
+
+.contents{
+  border: 1px solid #d6d6d6;
+  width:99%;
+  height: 990px;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.item{
+  position: relative;
+  display: inline-block;
+  border: 1px solid #d6d6d6;
+  text-align: center;
+}
+
+.big{
+  width: 492px;
+  height: 309px;
+}
+
+.small{
+  width: 238px;
+  height: 309px;
+}
+
+.item::after{
+  position: absolute;
+  left: 10px;
+  top: 275px;
+  content:" > ";
+  width: 24px;
+  height: 26px;
+  background-color: #aaa;
+  
+}
+
+.item:hover{
+  border: 1px solid blue;
+  &::after{
+    content:"구매하기";
+    width: 80px;
+    height: 26px;
+    background-color: blue;
+  }
+}

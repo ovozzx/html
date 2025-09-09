@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="page132.css">
+</head>
+<body>
+    <form>
+        <label for="user-id">아이디</label> <!--레이블을 선택해도 해당 input 박스 선택되게 함-->
+        <input type="text" id="user-id" placeholder="아이디를 입력하세요" readonly>
+        <!--<input type="text" id="user-id" placeholder="아이디를 입력하세요" readonly>
+        <input type="text" id="user-id" placeholder="아이디를 입력하세요" maxlength="3">
+        <input type="text" id="user-id" placeholder="아이디를 입력하세요" value="tkiwow">-->
+        <label for="user-age">나이</label>
+        <input type="number" id="user-age" max="3" min="0" step="2"> <!--버튼 존재, 버튼으로는 숫자 제한할 수 있지만 바로 사용자가 입력하는 것은 못 막음-->
+        <label for="user-email">이메일</label>
+        <input type="email" placeholder="이메일을 입력하세요" id="user-email"> <!--올바른 형식 아닐 경우 전송 시 에러남-->
+        <label for="user-password">비밀번호</label>
+        <input type="password" id="user-password"> <!--입력 값 안보이는 형식-->
+        <label for="user-photo">프로필 사진</label>
+        <input type="file" id="user-photo">
+        <label for="">라디오</label>
+        <input type="radio"><input type="radio">
+        <input type="radio">
+        <label for="job-1">학생</label>
+        <input type="radio" name="job" id="job-1">
+        <label for="job-1">직장인</label>
+        <input type="radio" name="job" id="job-2">
+        <label for="job-1">무직</label>
+        <input type="radio" name="job" id="job-3">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox" name="favorite">
+        <input type="checkbox" name="favorite">
+        <input type="checkbox" name="favorite">
+        <input type="button" value="클릭">
+        <input type="date">
+        <input type="range">
+        <input type="color">
+        <label>내용을 입력하세요.</label>
+        <textarea id="description"></textarea> <!--여러줄 입력 가능-->
+        <label for="choice-one">선택하세요</label>
+        <select id="choice-one"><!--여러개중 한개 선택-->
+            <option>첫 번째</option>
+            <option>두 번째</option>
+            <option>세 번째</option>
+        </select>
+    </form>
+</body>
+</html>

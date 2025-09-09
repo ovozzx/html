@@ -1,0 +1,59 @@
+body{
+    margin:0;
+    color:#333;
+}
+
+.row{
+    display: flex; /*inline-block처럼 동작하게 함 (촥 붙음)*/
+    flex-direction: row; /* 하나의 행에 아이템 배치 */
+    flex-wrap: wrap;
+    height:50px; /* 기본값이 strech라서 아래 방향으로 꽉 참 */
+    margin: 0;
+    padding: 0;
+    list-style: none; /*마커 없앰*/
+
+    & > div,
+    & > li{
+        background-color: #8888;
+        flex-basis:100px;
+        /* flex-grow: 1; */
+        /* flex-basis: 50%; 동일한 간격으로 꽉 채워짐 */
+        /* flex-shrink: 0; */
+    }
+
+    & > div:first-child,
+    & > li:first-child,
+    & > div:last-child,
+    & > div:last-child{
+        flex-shrink: 0; /* B만 줄어듦 */
+    }
+
+    & > div:nth-child(2),
+    & > li:nth-child(2)
+    {
+        flex-grow:1;
+    }
+
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none; /*마커 없앰*/
+    & > div,
+    & > li{
+        background-color: #AAA;
+        flex-basis: 100px; /*이때는 height만큼 가야하는데 shrink 동작해서 100px만큼 안커짐*/
+        /* flex-grow:1; */
+        /* flex-shrink: 0; */
+    }
+
+    & > div:nth-child(2),
+    & > li:nth-child(2){
+        flex-grow:1;
+    }
+
+}

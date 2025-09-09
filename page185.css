@@ -1,0 +1,30 @@
+.grid{
+    width: 400px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr; /* 열 수만큼 */
+    grid-template-rows: 3fr 2fr 1fr;
+    gap: 10px;
+
+    & > div:nth-child(even){
+        background-color: #FF0;
+    }
+
+    & > div:nth-child(odd){
+        background-color: red;
+    }
+
+    & > div:first-child{ /* A */
+        grid-row: 1 / -1; /* 첫번째 줄부터 마지막 줄까치 합쳐라 ↓ 방향 */
+    }
+
+    & > div:nth-child(2){ /* B */
+        grid-column: 2 / -1; /* 두번째 줄부터 마지막 줄까치 합쳐라 → 방향 */
+    }
+
+    & > div:nth-child(3){ /* B */
+        grid-row: 2 / -1; /* 두번째 줄부터 마지막 줄까치 합쳐라 ↓ 방향 */
+        grid-column: 2 / -1; /* 두번째 줄부터 마지막 줄까치 합쳐라 → 방향 */
+    }
+}
+

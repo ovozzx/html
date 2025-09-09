@@ -1,0 +1,150 @@
+.checkbox{
+    
+      & label{ /* decendent로 아래 모든 자식들 중에 찾는다! */
+            font-weight: 800;
+            font-size: 1.3rem;
+            vertical-align: middle;
+
+            &::before{
+                content: "";
+                width: 20px;
+                height: 31px;
+                background-image: url(https://ssl.pstatic.net/static/nid/join/sprite/m_sp_06_realname_48b1e603.png);
+                background-position: -477px -356px;
+                background-repeat: no-repeat;
+                background-size: 518px 469px;
+                vertical-align: middle;
+                display: inline-block;
+                padding : 0 0 0 9px;
+            }
+        }
+
+        &  input[type="checkbox"]{
+            display: none;
+            &:checked + label::before{ /* check되면 그다음에 있는 label 앞에 이미지 변경*/
+                width: 20px;
+                height: 31px;
+                background-image: url(https://ssl.pstatic.net/static/nid/join/sprite/m_sp_06_realname_48b1e603.png);
+                background-position: -477px -323px;
+                background-repeat: no-repeat;
+                background-size: 518px 469px;
+                vertical-align: middle;
+                display: inline-block;
+            }
+
+        }
+
+        & > div:last-child{
+            font-size: 0.85rem;
+            color: #999;
+            padding: 10px 0 0 20px;
+            margin-left: 20px;
+        }
+
+
+}
+
+.logo{
+    width: 123px;
+    height: 32px;
+    background-image: url(https://ssl.pstatic.net/static/nid/join/sprite/m_sp_06_realname_48b1e603.png);
+    background-position: 3px -328px;
+    background-repeat: no-repeat;
+    background-size: 459px 441px;
+    vertical-align: middle;
+    display: inline-block;
+
+}
+
+.wrapper{
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & > div:first-child{ /* & => wrapper */
+        vertical-align: middle;
+
+    }
+
+
+    & > div:nth-child(3){
+
+        display: flex;
+        flex-direction: column;
+        vertical-align: middle;
+
+        & > div:first-child{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            & > label{
+                flex-grow: 1;
+                font-weight: 800;
+                font-size: 1.3rem;
+                vertical-align: middle;
+
+            }
+
+            & > div{
+                padding : 5px 10px;
+                font-size: 0.7rem;
+                border: 1px solid #ccc;
+                border-radius: 20px;
+            }
+
+            & > *{
+                vertical-align: middle;
+            }
+
+        }
+
+
+        & > div:last-child{
+            width: 490px;
+            height : 100px;
+            overflow: auto;
+            font-size: 0.85rem;
+            color: #999;
+            padding: 10px 0 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        & span:nth-child(1){
+            color: #00aa00;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        & span:last-child{
+            color: #999;
+            font-size: 0.8rem;
+            font-weight: 500;
+            &::after{
+                content: " > ";
+            }
+        }
+        
+    }
+
+
+}
+
+
+.next{
+    width: 95%;
+    height:40px;
+    color: white;
+    background-color: #777;
+    padding-left: 33px;
+    padding-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
