@@ -1,4 +1,14 @@
 $().ready(function () {
+  $(".package-green-button").on("click", function () {
+    var price = $(this).closest(".package").data("price");
+
+    var p = $("<p>");
+    p.addClass("total-price");
+    p.text("From $ " + price);
+    $(this).closest(".package").append(p);
+    $(".package-green-button").remove();
+  });
+
   $(".add-license").on("click", function (event) {
     // var pTag = $("<p>");
     // pTag.text("$ 29999");

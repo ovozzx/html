@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form_Element 제어 실습</title>
-    <script type="text/javascript" src="./js/lib/jquery-3.7.1.min.js"></script>
-    <script type="text/javascript" src="./js/form_element.js"></script>
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="form_element_jquery.js"></script>
   </head>
   <body>
     <div class="page-123">
       <label for="email">이메일</label>
       <hr />
-      <input type="tel" id="email" placeholder="Email을 입력하세요." /><br />
+      <!--hr은 가로선-->
+      <input type="email" id="email" placeholder="Email을 입력하세요." /><br />
+      <!--br은 개행 (쓰지말기)-->
     </div>
 
     <div class="page-124">
@@ -21,6 +23,7 @@
         <option value="0">선택하세요.</option>
         <option value="1">회사원</option>
         <option value="2" selected>학생</option>
+        <!--selected : 기본적으로 "학생"이 선택되어있도록 미리 설정-->
         <option value="3">교수</option>
       </select>
     </div>
@@ -34,6 +37,8 @@
       <label for="age-20">20대</label>
 
       <input type="radio" name="age" id="age-30" value="30" checked />
+      <!--checked : 라디오에서 기본적으로 선택되어있도록 미리 설정-->
+      <!--라디오는 컬렉션 중 1개만 사용 가능-->
       <label for="age-30">30대</label>
 
       <input type="radio" name="age" id="age-40" value="40" />
