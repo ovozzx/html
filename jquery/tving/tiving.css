@@ -1,0 +1,217 @@
+body {
+  margin: 0;
+  background-color: #111;
+  color: #fff;
+  padding-left: 40px;
+  padding-top: 65px; /*큰 이미지 밑으로 떨어뜨림, 메뉴는 fixed라 안 움직이는 것?*/
+}
+
+.top-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 65px;
+  background-color: #111a; /*투명도 조절*/
+  z-index: 9999;
+  margin: 0;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+  & > .grow {
+    flex-grow: 1;
+  }
+}
+
+.details-main-box {
+  /* box-sizing : border-box; */
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  & > .background-image {
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+  }
+
+  & > .main-box {
+    z-index: 99999;
+    position: absolute;
+    /* right: 30px; */
+    right: calc(100% / 20);
+    bottom: calc(100% / 6);
+    height: 70%;
+    width: 30%;
+    & > .main-image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  & > .sub-box {
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    height: 70%;
+    width: 50%;
+
+    & > .title {
+      font-size: 3vw;
+      font-weight: 700;
+      position: absolute;
+      max-height: 30%;
+      /* top: 102px;
+    left: 110px; */
+      top: 10%;
+      left: 5%;
+    }
+
+    & > .playbutton-box {
+      position: absolute;
+      /* left: 112px;
+    top: 250px; */
+      top: 40%;
+      left: 5%;
+      border-top: 20px;
+      width: 20%;
+      height: 15%;
+      overflow: hidden;
+      margin: 10px;
+      & > .playbutton {
+        /* border-image-slice: 80% fill; */
+        border-radius: 300px;
+        width: 100%;
+        height: 100%;
+      }
+      &:hover {
+        /* border: 2px solid #aaa; */
+        transform: scale(1.1);
+      }
+    }
+
+    & > .overview {
+      font-size: 1vw;
+      position: absolute; /*어떻게 하지*/
+      left: 5%;
+      top: 70%;
+      width: 70%;
+      max-height: 50%;
+    }
+  }
+}
+
+.special-program {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 30px;
+
+  & > img {
+    /*.special-program 준 게 img까지 안 먹음 */
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+  }
+
+  & > .title {
+    position: absolute;
+    bottom: calc(100% / 10); /*변경된 부모 사이즈에 맞게 조절됨*/
+    left: calc(100% / 20);
+    font-size: 7vw; /*전체 크기에 비례해서 조절됨*/
+    font-weight: 700;
+    /* font-size: 6rem;
+    font-weight: 700;
+    left: 70px;
+    bottom: 100px; */
+  }
+}
+
+.program-list {
+  box-sizing: border-box;
+
+  & > h3 {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+  }
+
+  & > .poster-list {
+    width: 100%; /*부모 사이즈만큼*/ /*100vw => 자름 (보이는 크기만큼만)*/
+    overflow-x: clip; /*x축에 대해서만 적용*/
+    /* overflow clip에서 margin 주면 그만큼 노출 가능 */
+    /* overflow: clip; hidden: 넘어간 것 숨기기, 디폴트는 visible 벗어나도 보여줌 */
+    display: flex; /*한줄로 출력*/
+    list-style: none; /*마커 제거*/
+    margin: 0;
+    padding: 0;
+    gap: 0.625rem; /*10px*/
+
+    & > li {
+      cursor: pointer; /*커서의 모양이 손가락으로 바뀜*/
+      transition: transform 0.2s; /* 0.2s 동안 */
+      &:hover {
+        transform: translate(0, -20px); /* y축쪽으로만 움직임 */
+      }
+      & > img {
+        border-radius: 0.625rem;
+      }
+    }
+  }
+
+  & > .ranking {
+    & > li {
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      flex-basis: 310px;
+      flex-shrink: 0;
+
+      & > span {
+        position: relative;
+        z-index: 100;
+        text-shadow: 0 0 7px #fff;
+        line-height: 1; /* 순위 숫자를 밑으로 내림 */
+        flex-basis: 65px;
+        flex-shrink: 0; /* 줄어들지 말아라 */
+        flex-grow: 0; /* 커지지 말아라 */
+        font-style: italic;
+        font-size: 9rem;
+        font-weight: 900;
+        /* line-height: 0.5; */ /* 행간을 만들어줌 (줄간의 간격) */
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 0 80px 0 0;
+  border-top: 1px solid #aaa;
+  margin-top: 50px;
+  color: #aaa;
+  & > .bottom-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    font-weight: 800;
+    font-size: 2rem;
+
+    & > .grow {
+      flex-grow: 1;
+    }
+  }
+
+  & > .info {
+    list-style: none;
+    font-size: 1.2rem;
+    & > li:nth-child(1)::after {
+      content: " | 사업자정보확인";
+    }
+  }
+
+  & > .copyright {
+    padding-left: 40px;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+}

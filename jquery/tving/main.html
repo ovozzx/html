@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIVING</title>
+    <link type="text/css" rel="stylesheet" href="tiving.css" />
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="tiving.js"></script>
+  </head>
+  <body>
+    <ul class="top-menu">
+      <li>
+        <img
+          src="https://image.tving.com/ntgs/operation/logo/2023/09/18/1695032536_1.svg"
+        />
+      </li>
+      <li>드라마</li>
+      <li>예능</li>
+      <li>영화</li>
+      <li>스포츠</li>
+      <li>애니</li>
+      <li>뉴스</li>
+      <li class="grow">라이브</li>
+      <li>검색</li>
+      <li>프로필</li>
+    </ul>
+    <div
+      class="special-program"
+      data-filter="https://api.themoviedb.org/3/discover/tv?air_date.gte=2025-09-16&include_adult=false&include_null_first_air_dates=false&language=en-US&page=1&sort_by=popularity.desc"
+    >
+      <div class="title"></div>
+    </div>
+    <!--지금 방영 중인 콘텐츠 중 1개-->
+    <div
+      class="program-list"
+      data-filter="https://api.themoviedb.org/3/discover/tv?air_date.gte=2025-09-16&include_adult=false&include_null_first_air_dates=false&language=en-US&page=1&sort_by=popularity.desc"
+    >
+      <h3>지금 방영 중인 콘텐츠</h3>
+      <ul class="poster-list"></ul>
+    </div>
+    <div
+      class="program-list"
+      data-filter="https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=ko-KR&page=1&sort_by=popularity.desc&with_genres=16"
+    >
+      <h3>애니메이션</h3>
+      <ul class="poster-list"></ul>
+    </div>
+    <div
+      class="program-list"
+      data-filter="https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=ko-KR&page=1&sort_by=popularity.desc&with_genres=99"
+    >
+      <h3>다큐멘터리</h3>
+      <ul class="poster-list"></ul>
+    </div>
+    <div
+      class="program-list"
+      data-filter="https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=ko-KR&page=1&sort_by=popularity.desc&with_genres=99"
+      data-view="ranking"
+    >
+      <h3>실시간 인기 애니메이션</h3>
+      <ul class="poster-list ranking"></ul>
+    </div>
+    <div class="footer">
+      <ul class="bottom-menu">
+        <li>고객센터</li>
+        <li class="grow">이용약관</li>
+        <li>브랜드 바로가기</li>
+        <li>그룹 계열사 바로가기</li>
+      </ul>
+      <ul class="info">
+        <li>대표이사 : 최주희</li>
+        <li>사업장 : 서울특별시 마포구 상암산로 34</li>
+        <li>고객센터 (평일 09시~17시/점심시간 13시~14시)</li>
+        <li>ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780</li>
+      </ul>
+      <div class="copyright">copyright 주식회사 티빙</div>
+    </div>
+    <template id="poster-list-item-template">
+      <li data-id="#program-id#">
+        <img
+          src="https://image.tmdb.org/t/p/w220_and_h330_face/#poster-path#"
+        />
+      </li>
+    </template>
+    <template id="ranking-list-item-template">
+      <li data-id="#program-id#">
+        <span>#rank#</span>
+        <img
+          src="https://image.tmdb.org/t/p/w220_and_h330_face/#poster-path#"
+        />
+      </li>
+    </template>
+  </body>
+</html>
