@@ -14,6 +14,7 @@ $().ready(function () {
       for (var i = 0; i < repos_res.length; i++) {
         console.log(repos_res[i].name);
         var reposName = $("<div>");
+        reposName.before(profile);
         reposName.text(res[index].login + "/" + repos_res[i].name);
         $(".aside-list").append(reposName);
       }
