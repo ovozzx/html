@@ -13,10 +13,15 @@ $().ready(function () {
     $.get(res[index].repos_url, function (repos_res) {
       for (var i = 0; i < repos_res.length; i++) {
         console.log(repos_res[i].name);
-        var reposName = $("<div>");
-        reposName.before(profile);
-        reposName.text(res[index].login + "/" + repos_res[i].name);
-        $(".aside-list").append(reposName);
+        var reposBox = $("<div>");
+        reposBox.append(profile.clone());
+        var reposName = $("<a>");
+        var href = res[index].login + "/" + repos_res[i].name;
+        reposName.attr("href", "https://github.com/" + href);
+        reposName.text(href);
+        reposBox.addClass("repos-list");
+        reposBox.append(reposName);
+        $(".aside-list").append(reposBox);
       }
     });
   });
